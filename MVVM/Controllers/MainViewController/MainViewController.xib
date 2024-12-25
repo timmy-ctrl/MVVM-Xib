@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MVVM" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="E5j-JW-DtC" id="0Dl-on-qJ8"/>
+                <outlet property="tableView" destination="v6s-Fb-8bx" id="aSq-f8-FSb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,22 +20,38 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yej-nn-TCN">
-                    <rect key="frame" x="175" y="416" width="37" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="v6s-Fb-8bx">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="E5j-JW-DtC">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="E4s-yx-HHf"/>
+                        <constraint firstAttribute="width" constant="37" id="VmS-68-Lby"/>
+                    </constraints>
+                    <color key="color" systemColor="systemGray2Color"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="E5j-JW-DtC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2nC-GZ-gZP"/>
+                <constraint firstItem="v6s-Fb-8bx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JSZ-zz-Tb4"/>
+                <constraint firstItem="v6s-Fb-8bx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KSa-KA-7Xy"/>
+                <constraint firstItem="E5j-JW-DtC" firstAttribute="centerX" secondItem="v6s-Fb-8bx" secondAttribute="centerX" id="MKw-a4-l2Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="v6s-Fb-8bx" secondAttribute="trailing" id="Pqi-b8-8MS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="v6s-Fb-8bx" secondAttribute="bottom" id="ZCp-Mk-J4m"/>
+            </constraints>
             <point key="canvasLocation" x="21" y="21"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
